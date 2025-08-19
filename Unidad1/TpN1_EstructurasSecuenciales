@@ -1,0 +1,133 @@
+import math
+
+def ejercicio_1():
+    """
+    1)	Crear un programa que imprima por pantalla el mensaje: “Hola Mundo!”.
+    """
+    print("Hola Mundo!")
+
+
+def ejercicio_2():
+    """
+    Crear un programa que pida al usuario su nombre e imprima por pantalla un saludo usando el nombre ingresado. 
+    Por ejemplo: si el usuario ingresa “Marcos”, el programa debe imprimir por pantalla “Hola Marcos!”. 
+    Consejo: esto será más sencillo si utilizas print(f…) para realizar la impresión por pantalla. 
+    """
+
+    nombre = input("Por favor ingrese su nombre: ")
+    print(f"Hola {nombre}!")
+   
+
+def ejercicio_3():
+    """
+   3)	Crear un programa que pida al usuario su nombre, apellido, edad y lugar de residencia e imprima por pantalla una oración con los datos ingresados. 
+   Por ejemplo: si el usuario ingresa “Marcos”, “Pérez”, “30” y “Argentina”, el programa debe imprimir “Soy Marcos Pérez, tengo 30 años y vivo en Argentina”. 
+   Consejo: esto será más sencillo si utilizas print(f…) para realizar la impresión por pantalla. 
+    """
+
+    nombre = input("Por favor ingrese su nombre: ")
+    apellido = input("Por favor ingrese su apellido: ")
+    edad = input("Por favor ingrese su edad: ")
+    residencia = input("Por favor ingrese su pais de residencia: ")
+
+    print(f"Soy {nombre} {apellido}, tengo {edad} años y vivo en {residencia}.")
+
+
+def ejercicio_4():
+    """
+    Calcula y muestra el área y el perímetro de un círculo dado su radio.
+    Solicita al usuario que ingrese el radio del círculo, luego calcula el área y el perímetro
+    utilizando la fórmula matemática correspondiente. Finalmente, imprime los resultados
+    formateados con dos decimales.
+    Requiere:
+        - El módulo 'math' debe estar importado.
+    Entradas:
+        - radio (float): El radio del círculo ingresado por el usuario.
+    Salidas:
+        - Imprime el área y el perímetro del círculo en la consola.
+    """
+
+    radio = float(input("Por favor ingrese el radio:"))
+    area = math.pi * (radio ** 2)
+    perimetro = 2 * math.pi * radio
+
+
+    print(f"El area del circulo es {area:.2f} y su perimetro es {perimetro:.2f}")
+
+
+def ejercicio_5():
+    """
+    5)	Crear un programa que pida al usuario una cantidad de segundos e imprima por pantalla a cuántas horas equivale.
+    """
+    segundos = int(input("Por favor ingrese una cantidad de segundos: "))
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos_restantes = segundos % 60
+
+    print(f"{segundos} segundos equivalen a {horas} horas, {minutos} minutos y {segundos_restantes} segundos.")
+
+
+def ejercicio_6():
+    """
+    Crear un programa que pida al usuario un número e imprima por pantalla la tabla de multiplicar de dicho número. 
+    """
+    numero = int(input("Por favor ingrese un numero: "))
+    for i in range(1, 11):
+        print(f"{numero} x {i} = {numero * i}")
+
+
+def ejercicio_7():
+    """
+    7)	Crear un programa que pida al usuario dos números enteros distintos del 0 y muestre por pantalla el resultado de sumarlos, dividirlos, multiplicarlos y restarlos.  
+    """
+    numero1 = int(input("Por favor ingrese un numero entero distinto de 0: "))
+    numero2 = int(input("Por favor ingrese otro numero entero distinto de 0: "))
+
+    if numero1 == 0 or numero2 == 0:
+        print("Los numeros deben ser distintos de 0.")
+    else:
+        print(f"Suma: {numero1 + numero2}")
+        print(f"Resta: {numero1 - numero2}")
+        print(f"Multiplicacion: {numero1 * numero2}")
+        print(f"Division: {numero1 / numero2}")
+
+
+def ejercicio_8():
+    """
+    8)	Crear un programa que pida al usuario su altura y su peso e imprima por pantalla su índice de masa corporal.
+    """
+    altura = float(input("Por favor ingrese su altura en metros: "))
+    peso = float(input("Por favor ingrese su peso en kilogramos: "))
+
+    imc = peso / (altura ** 2)
+    print(f"Su índice de masa corporal es: {imc:.2f}")
+
+
+def ejercicio_9():
+    """
+    9)	Crear un programa que pida al usuario una temperatura en grados Celsius e imprima por pantalla su equivalente en grados Fahrenheit. 
+Tener en cuenta la siguiente equivalencia: 
+𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑎 𝑒𝑛 𝐹𝑎ℎ𝑟𝑒𝑛ℎ𝑒𝑖𝑡 = 9/5 . 𝑇𝑒𝑚𝑝𝑒𝑟𝑎𝑡𝑢𝑟𝑎 𝑒𝑛 𝐶𝑒𝑙𝑠𝑖𝑢𝑠 + 32 
+
+    """
+    celsius = float(input("Por favor ingrese la temperatura en grados Celsius: "))
+    fahrenheit = (9/5) * celsius + 32
+    print(f"La temperatura en grados Fahrenheit es: {fahrenheit:.2f}")
+
+
+def ejercicio_10():
+    """
+    10)	Crear un programa que pida al usuario 3 números e imprima por pantalla el promedio de dichos números.
+    """
+    numero1 = float(input("Por favor ingrese el primer numero: "))
+    numero2 = float(input("Por favor ingrese el segundo numero: "))
+    numero3 = float(input("Por favor ingrese el tercer numero: "))
+
+    promedio = (numero1 + numero2 + numero3) / 3
+    print(f"El promedio de los numeros ingresados es: {promedio:.2f}")
+
+
+
+if __name__ == "__main__":
+    ejercicio_1()
+    
